@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="icon" href="./images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="content">
+        <div class="input">
+            <h1 class="title">To Do List</h1>
+            <form class="form">
+                <div class="input-data">
+                    <input type="text" placeholder="Add to do" id="input-text">
+                    <i class='bx bx-plus'></i>
+                </div>
+                <h1 class="nothing">Nothing to do!</h1>
+                <!-- <div id="added-items"></div> -->
+                <ul id="list"></ul>
+            </form>
+        </div>
+        <div class="completed-task">
+            <h1>Completed</h1>
+            <ul class="completed-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

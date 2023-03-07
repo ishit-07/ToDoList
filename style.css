@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito;
+}
+
+
+.content{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, rgb(165, 243, 252), rgb(34, 211, 238));
+    height: 100vh;
+}
+
+.input,
+.completed-task{
+    margin-top: 100px;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 20px;
+    height: 60%;
+    Overflow-x: hidden;
+    padding: 40px;
+    margin-right: 60px;
+}
+
+
+.input .title,
+.completed-task h1{
+    background: -webkit-linear-gradient(rgb(165, 243, 252), rgb(34, 211, 238));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 50px;
+}
+
+.input .form{
+    margin-top: 20px;
+}
+
+.input .form .input-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input .form .input-data input{
+    outline: none;
+    border: 1px solid rgb(35, 189, 197);
+    padding: 10px;
+    margin-right: 8px;
+}
+
+.input .form .input-data .bx{
+    background: rgb(35, 189, 197);
+    padding: 6px;
+    font-size: 28px;
+    font-weight: 900;
+    border-radius: 50%;
+    border: 6px solid rgb(114, 233, 225);
+}
+
+.input .form .nothing{
+    margin-top: 20px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+#list{
+    margin-top: 10px;
+    list-style: none;
+}
+
+.lists{
+    border-bottom: 2px solid rgb(35 , 189 ,197);
+    padding-bottom: 10px;
+    list-style: none;
+    margin: 10px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.lists .para{
+    padding-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(203, 190, 190);
+}
+
+::-webkit-scrollbar-thumb{
+    background:rgba(61, 174, 211, 0.9);
+}
+
+
