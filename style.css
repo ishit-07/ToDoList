@@ -103,3 +103,26 @@
 }
 
 
+.clearAll {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-90%,-50%);
+}
+
+.clearAll .clear{
+    padding: 7px 17px; 
+    color: rgb(7, 94, 112);
+    background: white;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(62, 62, 109);
+    cursor: pointer;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.clearAll .clear:hover{
+    background: rgb(196, 196, 230);
+    color: rgb(35, 189, 197);
+}
