@@ -4,6 +4,11 @@ let list = document.querySelector('#list');
 let completed = document.querySelector('.completed-task');
 let complete = document.querySelector('.completed-list');
 let nothing = document.querySelector('.form .nothing');
+let clear = document.querySelector('.clear');
+
+
+
+
 nothing.style.display = "block";
 completed.style.display = "none";
 
@@ -15,7 +20,7 @@ addItem.addEventListener('click', () => {
         let item = document.createElement('p');
 
         li.className = "lists";
-        item.className = 'para'
+        item.className = 'para';
 
         select.setAttribute('type' , 'checkbox');
 
@@ -23,30 +28,56 @@ addItem.addEventListener('click', () => {
         li.appendChild(select);
         li.appendChild(item);
 
-        item.innerText =  input.value;
+        let text = input.value;
+        item.innerText =  text;
         input.value = "";
         
         select.addEventListener('click' , (e) => {
-            // let block = e.target.parentElement;
+            // let block = e.target.parentElement.parentElement;
             let remove = e.target.parentElement;
             list.removeChild(remove);
-            // if(block.classList.contains('lists') == -1){
-            //     nothing.style.display = "block";
-            // }
+
+            item.innerText = text;
 
             completed.style.display = "block";
             nothing.style.display = "block";
+
+            if(list.childElementCount !== 0){
+                nothing.style.display = "none";
+            }
             complete.appendChild(li);
             li.appendChild(select);
             li.appendChild(item);
 
-            completed.addEventListener('click' , () => {
+            
+            select.addEventListener('click' , () => {
+
+                if(list.childElementCount === 0){
+                    nothing.style.display = "none";
+                }
                 list.appendChild(li);
                 li.appendChild(select);
                 li.appendChild(item);
-                nothing.style.display = "none";
+
+                if(complete.childElementCount == 0){
+                    completed.style.display = "none";
+                }else{
+                    completed.style.display = "block";
+                }
             })
+        })
+
+        clear.addEventListener('click' , () => {
+            while(list.childElementCount !== 0 ){
+                list.removeChild(li);
+            }
+
+            while(complete.childElementCount !== 0){
+                complete.removeChild(li);
+            }
+            completed.style.display = "none";
         })
         
     }
 })
+
